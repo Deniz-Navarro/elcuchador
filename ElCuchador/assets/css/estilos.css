@@ -1,0 +1,70 @@
+body{
+    background-color: #f4f1de;
+}
+
+.header{
+    background-color: #81b29a;
+}
+
+.formulario{
+    background-color: #3d405b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.formu{
+    background: none;
+    color: white;
+    border-color: white;
+}
+
+.login{
+    background-color: white;
+    color:  #3d405b;
+    font-size: 20px;
+}
+
+.login:hover{
+    color: white;
+    background-color: #5c6e91;
+}
+
+.soli{
+    background-color: #e07a5f;
+    border-radius: 10px;
+    color: white;
+    border-color: #9e2a2b;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#p::placeholder {
+    color: rgb(207, 202, 202);
+    font-style: italic;
+}
+
+#linea {
+    background: linear-gradient(to right, #354b40, #81b29a, #354b40);
+    height: 2px;
+    max-width: 100%;
+    padding: 0;
+}
+
+textarea{
+    resize: none;
+    background-color: #3d405b;
+    color: white;
+    border-color: white;
+    border-radius: 10px;
+}
+
+.form-container .dropzone{
+    border: 2px dashed #c3c3c3;
+    border-radius: 10px;
+    background-color: #545772;    
+    padding: 40px;
+}
+
+.form-container h2, .note{
+    color: white;
+}
