@@ -53,6 +53,25 @@
     <div id="linea"></div>
     <div class="text-center">
         <div class="row">
+          <div class="col-lg-12">
+            <!--Barra de navegacion-->
+            <ul class="nav justify-content-center" style="background-color: #6b8f7e">
+              <li class="nav-item">
+                <a class="nav-link active text-dark" href="restaurantes.php"><img src="assets/imagenes/cubiertossss.png" class="rounded" width="30"  alt="..."> Restaurantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="puestoc.php"><img src="assets/imagenes/puesto de comida.png" class="rounded" width="23"   alt="..."> Puestos de comida</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="bares.php"><img src="assets/imagenes/cervecitaaaaa.webp" class="rounded" width="30"   alt="..."> Bares</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="todasof.php"><img src="assets/imagenes/oferta.png" class="rounded" width="30"   alt="..."> Todas las ofertas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
             <div class="col"></div>
             <div class="col-lg-4 mt-4"><h4><?php echo $nombre2; ?></h4></div>
             <div class="col-lg-4 mt-4">
@@ -60,9 +79,18 @@
                 <a href="login/login.html" class="btn btn-info">Seguir</a>
             <?php } 
             else {
+              $query = mysqli_query($conn,"SELECT * FROM seguidores WHERE idusuario = '".$clave."' and idnegocio = '".$negocio."'");
+              $aux = False;
+              while($row = $query->fetch_array()){
+                $aux = True;
+              }
+              if($aux == True){ ?>
+              <a href="seguir.php?idnegocio=<?php echo $negocio; ?>&control=2" class="btn btn-outline-danger">Dejar de seguir</a>
+            <?php
+              }else{
             ?>
-                <a href="#" class="btn btn-info">Seguir</a>
-            <?php } ?>
+                <a href="seguir.php?idnegocio=<?php echo $negocio; ?>&control=1" class="btn btn-outline-primary">Seguir</a>
+            <?php } }?>
             </div>           
             <div class="col"></div>
         </div>
@@ -219,4 +247,5 @@
     
   </body>
 </html>
+
 
