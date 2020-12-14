@@ -19,6 +19,14 @@ if($control == 1 or $control == 2){
   if($control == 1){
       $query = mysqli_query($conn,"INSERT INTO publicaciones (clave,idnegocio,descripcion,nombre,precio,tipo,imagen,tcomida) 
       VALUES (null,'$idnegocio','$descripcion','$nombre','$precio','$tipo','$imagen','$tcomida')");
+      #$query = mysqli_query($conn,"SELECT * FROM seguidores WHERE clave = '".$idnegocio."'");
+      #while($row = $query->fetch_array()){
+       #   $destinatario = $row['correo'];
+        #  $asunto = '¡Nueva publicacion!';
+       #   $mensaje = 'Esta es una prueba';
+        #  mail($destinatario, $asunto, $mensaje);
+      #}
+      
   }
   header('location:solicitudesp.php');
 
